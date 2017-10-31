@@ -1,0 +1,5 @@
+Work plan: 
+
+31.10- Choosing which analysis we do from the four options, and creating our own idea. Also creating the GitHub.
+01.11- Writing a code that opens and reads the data files and from there start applying basic analysis. Deciding who
+will do which parts. 
