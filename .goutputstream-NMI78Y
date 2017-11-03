@@ -1,0 +1,33 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+void reader_of_files();
+
+
+void reader_of_file() 
+{
+	fstream file;
+	file.open("smhi-openda_Karlstad.csv");
+	string line;
+	
+	vector <string> vecline;
+	while (file >> line) {
+		vecline.push_back(line);
+		
+	
+}
+
+	cout << vecline.size()<< endl;
+	
+	
+	for (size_t i=0; i<81; i++){
+		cout << vecline.at(i) << endl;
+		
+		//cout << vecline.at(vecline.size()-i) << endl;
+	
+}	
+	file.close();
+}
+
