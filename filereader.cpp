@@ -42,11 +42,16 @@ void filereader()
 		
 		
 	}
+	/*
 	for (size_t i = 0; i < vecyear.size(); ++i) cout << vecyear.at(i) << endl;
 	for (size_t i = 0; i < vecmonth.size(); ++i) cout << vecmonth.at(i) << endl;
 	for (size_t i = 0; i < vecday.size(); ++i) cout << vecday.at(i) << endl;
 	for (size_t i = 0; i < vectemperature.size(); ++i) cout << vectemperature.at(i) << endl;
+	*/
 		//cout << vecyear.at(100000) << endl;
+		
+		
+	cout << vecyear.size() << endl;
 	inFile.clear();
 	inFile.seekg(0, ios::beg); 
 	
