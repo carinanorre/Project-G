@@ -5,69 +5,49 @@
 using namespace std;
 //"datasets/smhi-openda_Karlstad.csv"
 
-//void filereader();
+void filereader();
 
-//void filereader()
-int main(){
+void filereader()
+{
 
-	
 	cout << "Reading values from uppsala.dat..." << endl; 
 	vector<string> uppsaladata; //Creating a vector called uppsaladata to hold the values from the data file
 	ifstream inFile;
 	inFile.open("datasets/uppsala_tm_1722-2013.dat");
+	//inFile.open("test");
 	string line;
 	
+	vector<Int_t> vecyear;
+	vector<Int_t> vecmonth;
+	vector<Int_t> vecday;
+	vector<Float_t> vectemperature;
+	
 	if (inFile){
-		float data;
+		Float_t data;
+		Int_t year;
+		Int_t month;
+		Int_t day;
+		Float_t temperature;
+		Float_t temperature2;
+		Int_t city;
 		
-		while (getline(inFile, line)) {
-			uppsaladata.push_back(line);
+		while (inFile >> year >> month >> day >> temperature >> temperature2 >> city){
+			//cout << year << ", " << month << ", " << day << ", " << temperature << endl;
+			vecyear.push_back(year);
+			vecmonth.push_back(month);
+			vecday.push_back(day);
+			vectemperature.push_back(temperature);
+			
 		}
-	}
-	//for (size_t i = 0; i < uppsaladata.size(); ++i) cout << uppsaladata.at(i) << endl;
-	
-	//cout << uppsaladata.at(1) << endl;
-	
-	int year;
-	int month;
-	int day;
-	float temperature;
-	
-	vector<int> vecyear;
-	vector<int> vecmonth;
-	vector<int> vecday;
-	vector<float> vectemperature;
-	
-	for (size_t i = 0; i < uppsaladata.size(); ++i){
-		inFile >> year >> month >> day >> temperature;
-		vecyear.push_back(year);
-		vecmonth.push_back(month);
-		vecday.push_back(day);
-		vectemperature.push_back(temperature);
+		
 		
 	}
-	
 	for (size_t i = 0; i < vecyear.size(); ++i) cout << vecyear.at(i) << endl;
-	
-	//cout << vecyear.at(4) << endl;
-	/*ifstream open("datasets/smhi-openda_Karlstad.csv");
-	
-	if(!open.is_open()) cout << "ERROR: File Open" << endl;
-	
-	string year;
-	string month;
-	string day;
-	string time;
-	string temperature;
-	
-	while(open.good()){
-		
-		getline(open.year,'-');
-		getline(open.month,'-');
-		getline(open.day,';');
-		getline(open.time,';');
-		getline(open.temperature,';');
-	
-	}*/
+	for (size_t i = 0; i < vecmonth.size(); ++i) cout << vecmonth.at(i) << endl;
+	for (size_t i = 0; i < vecday.size(); ++i) cout << vecday.at(i) << endl;
+	for (size_t i = 0; i < vectemperature.size(); ++i) cout << vectemperature.at(i) << endl;
+		//cout << vecyear.at(100000) << endl;
+	inFile.clear();
+	inFile.seekg(0, ios::beg); 
 	
 }
