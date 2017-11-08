@@ -45,14 +45,20 @@ void filereader()
 	}
 	
 	vector<Int_t> notuppsala;
-	//Need to somehow delete the data points that aren't taken from Uppsala
-	for (Int_t i=0; veccity.size(); ++i) {
+	//Need to delete the data points that aren't taken from Uppsala
+	
+	for (size_t i=0; i < veccity.size(); ++i) {
 		if (veccity.at(i) > 1){	
 			notuppsala.push_back(i);
+		
 		}
 		else continue;
 	}
-	for (size_t i = 0; i < notuppsala.size(); ++i) cout << notuppsala.at(i) << endl;
+	
+	//for (size_t i = 0; i < notuppsala.size(); ++i) cout << notuppsala.at(i) << endl;
+	
+	//for (Int_t i=0; i < vec
+	
 	
 	//for (size_t i = 0; i < vecyear.size(); ++i) cout << vecyear.at(i) << endl;
 	//for (size_t i = 0; i < vecmonth.size(); ++i) cout << vecmonth.at(i) << endl;
