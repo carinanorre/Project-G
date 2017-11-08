@@ -13,16 +13,17 @@ void reader_of_file()
 	string line;
 	
 	vector <string> vecline;
-	while (file >> line) {
+	while (getline(file, line)) {
 		vecline.push_back(line);
 		
 	
 }
+/*
 	for (size_t i=104; i<426155; i++){
-		if (vecline.at(i) == "19"*) {
+		if (vecline.at(i) == ) {
 			cout << "element is a year" << endl;
 	}
-		else if (vecline.at(i) == "20"*) {
+		else if (vecline.at(i) == ) {
 			cout << "element is a year" << endl;
 	}
 		else {
@@ -31,16 +32,17 @@ void reader_of_file()
 	}
 	
 }
-	//cout << vecline.size()<< endl;
-	
-/*	
-	for (size_t i=60; i<104; i++){
-		cout << vecline.at(i) << endl;
+*/	
+vecline.erase(vecline.begin(), vecline.begin()+11);
+
+cout << vecline.size()<< endl;
 		
-		//cout << vecline.at(vecline.size()-i) << endl;
+	for (size_t i=0; i<20; i++){
+		cout << vecline.at(i) << endl;
+
+
 
 }	
-*/
 cout << vecline.size() << endl;
 	file.close();
 }
