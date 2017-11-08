@@ -67,6 +67,7 @@ void filereader()
 		//cout << vecyear.at(100000) << endl;
 		
 	//for (size_t i = 0; i < veccity.size(); ++i) cout << veccity.at(i) << endl;	
+
 	inFile.clear();
 	inFile.seekg(0, ios::beg); 
 	
