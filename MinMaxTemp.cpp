@@ -9,10 +9,13 @@ void maxtemp();
 
 void maxtemp()
 {
-	for (size_t i=1; i < vecyear.size(); i++){
-		if (vecyear.at(i) == vecyear.at(i-1)){
-			
-			
+	Int_t j;
+	j=1;
+	vector<Int_t> beaker;
+	
+	for (size_t i=0; i < vecyear.size(); i++){
+		if (vecyear.at(i) != vecyear.at(i-1)){
+			breaker.push_back(i); 
 		}
 			
 		else continue;
