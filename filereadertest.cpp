@@ -35,90 +35,48 @@ void filereadertest()
 		
 	while (inFile >> year >> month >> day >> temperature >> temperature2 >> city){
 		//cout << year << ", " << month << ", " << day << ", " << temperature << endl;
-		vecyear.push_back(year);
-		vecmonth.push_back(month);
-		vecday.push_back(day);
-		vectemperature.push_back(temperature);
-		vectemperature2.push_back(temperature2);
-		veccity.push_back(city);
+		if (city == 1){
+			vecyear.push_back(year);
+			vecmonth.push_back(month);
+			vecday.push_back(day);
+			vectemperature.push_back(temperature);
+			vectemperature2.push_back(temperature2);
+			veccity.push_back(city);
+		}
 		
 	}
-	vector<Int_t> notuppsala;
-	//Need to delete the data points that aren't taken from Uppsala
+	cout << vecyear.size() << endl;
 	
-	for (size_t i=0; i < veccity.size(); ++i) {
-		if (veccity.at(i) > 1){	
-			notuppsala.push_back(i);
-		}
-		else continue;
-	}
-	
-	//for (size_t i = 0; i < notuppsala.size(); ++i) cout << notuppsala.at(i) << endl;
 	
 	//for (size_t i = 0; i < vecyear.size(); ++i) cout << vecyear.at(i) << endl;
 	//for (size_t i = 0; i < vecmonth.size(); ++i) cout << vecmonth.at(i) << endl;
 	//for (size_t i = 0; i < vecday.size(); ++i) cout << vecday.at(i) << endl;
-	//for (size_t i = 0; i < vectemperature.size(); ++i) cout << vectemperature.at(i) << endl;
-		//cout << vecyear.at(100000) << endl;
-		
-	//for (size_t i = 0; i < veccity.size(); ++i) cout << veccity.at(i) << endl;	
+	//for (size_t i = 0; i < vectemperature.size(); ++i) cout << vectemperature.at(i) << endl;	
 	
-	for (size_t i=0; i < notuppsala.size(); ++i) {
-		Int_t m;
-		m=notuppsala.at(i);
-		vecyear.erase(vecyear.begin() +m);
-		vecmonth.erase(vecmonth.begin() +m);
-		vecday.erase(vecday.begin() +m);
-		vectemperature.erase(vectemperature.begin() +m);
-		vectemperature2.erase(vectemperature2.begin() +m);
-		veccity.erase(veccity.begin() +m);
-	}
 	vector<Int_t> yearbreaker;
+	yearbreaker.push_back(0);
 	
-	//for (Int_t j=1723; j < 2014; ++j){
-		for (size_t i=0; i < vecyear.size(); ++i){
-			Int_t j=i+1;
-			if (vecyear.at(i) < vecyear.at(j)){
-				//yearbreaker.push_back(i); 
-				//j=j+1;
-				//cout << vecyear.at(j) << endl;
-				cout << j-1 << endl;
-			}
-			
-			else continue;
-		
-		}
-	//}
-	//for (size_t i = 0; i < yearbreaker.size(); ++i) cout << yearbreaker.at(i) << endl;
-	//cout << yearbreaker.size() << endl;
-	
-	/*
-	Int_t j;
-	j=1;
-	vector<Int_t> breaker;
-	Int_t index;
-	
-	for (size_t i =0 ; i = vecyear.begin(); i != vecyear.end(); ++i){
-		if (vecyear.at(i) != vecyear.at(i+1)){
-			index= i-vecyear.begin();
-			cout << index << endl;
-		}
-	}
-	
-	
-	
-	for (size_t i=0; i < vecyear.size(); ++i){
-		if (vecyear.at(i) != vecyear.at(i-1)){
-			//cout << vecyear.at(i) << endl;
-			breaker.push_back(i); 
+	for (size_t i=0; i < vecyear.size() -1 ; ++i){
+		Int_t j=i+1;
+		if (vecyear.at(i) < vecyear.at(j)){
+			//yearbreaker.push_back(j); 
+			cout << vecyear.at(j) << endl;
+			//cout << j << endl;
+			//cout << vecmonth.at(j) << ", " << vecday.at(j) << endl;
 		}
 			
 		else continue;
-		
-		
 	}
-	*/
-
+		
+		Int_t l;
+		for (size_t k=0; k < yearbreaker.size() + 1; k++){
+			l= yearbreaker.at(k);
+			//for (vectemperature.at(l); vectemperature.at(l+1))
+			cout << 
+	
+	//cout << vecmonth.at(j) << vecday.at(j) << endl;
+	
+	
 	inFile.clear();
 	inFile.seekg(0, ios::beg); 
 	
