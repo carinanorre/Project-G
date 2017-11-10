@@ -250,7 +250,7 @@ void filereadertestandtemp()
 		b[i]=vecavgdiff.at(i);
 	}
 	TGraph* meandiff = new TGraph(c, a, b);
-	meandiff->SetTitle("Mean Temperature Difference Each Year;Year;Temperature");
+	meandiff->SetTitle("Mean Temperature Difference Each Year;Year;Temperature Correction");
 	meandiff->SetFillColor(kBlue);
 	meandiff->SetLineColor(kBlue);
 	meandiff->Draw("AC");
