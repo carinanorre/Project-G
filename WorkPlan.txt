@@ -3,3 +3,7 @@ Work plan:
 31.10- Choosing which analysis we do from the four options, and creating our own idea. Also creating the GitHub.
 01.11- Writing a code that opens and reads the data files and from there start applying basic analysis. Deciding who
 will do which parts. 
+	Workplan: 
+	L+B= Breakdown of steps and foundation of code for each part
+	C+M= Work on different methods of implementing the code
+07.11- Finished the filereader and 

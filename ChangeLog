@@ -4,3 +4,6 @@
 03.11- trying different methods to read the data file, lots of research.
 06.11- working code that reads through the file. 
 07.11 - working code that reads through the file and creates the vectors for the desired data.
+08.11- created file breaker, and started analysis for the hottest and coldest day of the years.
+09.11- finished analysis for the hottest and coldest day of the years and made the histogram, started analysis for 
+	the mean temperature for each year.
