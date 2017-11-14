@@ -180,6 +180,19 @@ void filereadertestandtemp()
 		htemp2->Fill(coldday.at(i));
 	}
 	
+	//creating one last histogram to find the predicted coldest day
+	//this histogram makes the november and december days negative so that 
+	//we can use the histogram function GetMean(1) to find the predicted 
+	//coldest day.
+	for (size_t i=0; i < coldday.size(); i++){
+		if (coldday.at(i) < 200){
+			htemp3->Fill(coldday.at(i));
+		}
+		else {
+			htemp3->Fill(366-coldday.at(i));
+		}
+	}
+	cout << "the coldest predicted day: " << htemp3->GetMean(1) << endl;
 	
 	
 		
